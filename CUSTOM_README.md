@@ -8,3 +8,20 @@ git merge upstream/master
 git push origin master
 5、需要到github界面上提交pull request ，请求合并到上游项目。在左边菜单的 “Merge Requests”菜单。提交完成后就等待对方同意了合并。
 
+####
+#解决文件名过长git无法clone
+git config --global core.longpaths true
+#OpenSSL SSL_read: Connection was reset, errno 10054 exit code: 128
+git config --global http.sslVerify false
+# Failed to connect to github.com port 443 after 21083 ms: Timed out
+ 1. 
+    git config --global http.proxy http://127.0.0.1:1080
+
+    git config --global https.proxy http://127.0.0.1:1080
+ 2.
+  取消全局代理：
+    git config --global --unset http.proxy
+
+    git config --global --unset https.proxy
+ 3.
+  pub get
