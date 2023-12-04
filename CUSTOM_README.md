@@ -25,3 +25,8 @@ git config --global http.sslVerify false
     git config --global --unset https.proxy
  3.
   pub get
+ 
+
+
+
+#version update for H5js框架兼容处理
